@@ -1,0 +1,16 @@
+# .shed.yml supporting automatic pushes.
+owner: artbio
+name: ngsplot
+description: visualize functionnal NGS data
+long_description: |
+  Vizualize next-generation sequencing (NGS) samples at functional genomic regions
+  Working Galaxy wrapper from https://github.com/shenlab-sinai/ngsplot
+categories:
+  - Visualisation
+  - ChIP-seq
+  - Graphics
+  - Transcriptomics
+homepage_url: http://artbio.fr
+remote_repository_url: https://github.com/ARTbio/tools-artbio/tree/master/tools/ngsplot
+toolshed:
+  - testtoolshed
