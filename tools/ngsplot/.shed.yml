@@ -6,7 +6,7 @@ long_description: |
   Vizualize next-generation sequencing (NGS) samples at functional genomic regions
   Working Galaxy wrapper from https://github.com/shenlab-sinai/ngsplot
 categories:
-  - Visualisation
+  - Visualization
   - ChIP-seq
   - Graphics
   - Transcriptomics
