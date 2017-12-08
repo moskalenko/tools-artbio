@@ -1,4 +1,4 @@
-<tool id="ngsplot" name="ngsplot" version="0.1.0">
+<tool id="ngsplot" name="ngsplot" version="0.3.0">
     <description>visualize NGS samples at functional genomic regions - beta</description>
     <requirements>
         <requirement type="package" version="1.17.1=r3.3.2_1">r-catools</requirement>
@@ -13,13 +13,13 @@
 export NGSPLOT="$__tool_directory__" &&
 printenv &&
 #if $numsamples.numsamples2 == "1":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
+   perl "$__tool_directory__"/runNGSplot.pl
+   $genome_name
+   $genomic_region_source_type.genomic_region
+   $genomic_region_source_type.further_information
+   $genomic_region_source_type.interval_size
+   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option
+   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size
    $numsamples.numsamples2
    $numsamples.usepair.usepair1
 
@@ -44,674 +44,9 @@ printenv &&
    $flooding_fraction
    $smooth_method
    $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "2":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "3":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "4":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $numsamples.usepair.bamfile4
-   $numsamples.usepair.reffile4
-   $numsamples.usepair.genelist4.usegenelist4
-   $numsamples.usepair.genelist4.genelist4
-   $numsamples.usepair.title4
-   $numsamples.usepair.fraglen4
-   $numsamples.usepair.linecol4
-   
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "5":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $numsamples.usepair.bamfile4
-   $numsamples.usepair.reffile4
-   $numsamples.usepair.genelist4.usegenelist4
-   $numsamples.usepair.genelist4.genelist4
-   $numsamples.usepair.title4
-   $numsamples.usepair.fraglen4
-   $numsamples.usepair.linecol4
-
-   $numsamples.usepair.bamfile5
-   $numsamples.usepair.reffile5
-   $numsamples.usepair.genelist5.usegenelist5
-   $numsamples.usepair.genelist5.genelist5
-   $numsamples.usepair.title5
-   $numsamples.usepair.fraglen5
-   $numsamples.usepair.linecol5
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "6":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $numsamples.usepair.bamfile4
-   $numsamples.usepair.reffile4
-   $numsamples.usepair.genelist4.usegenelist4
-   $numsamples.usepair.genelist4.genelist4
-   $numsamples.usepair.title4
-   $numsamples.usepair.fraglen4
-   $numsamples.usepair.linecol4
-
-   $numsamples.usepair.bamfile5
-   $numsamples.usepair.reffile5
-   $numsamples.usepair.genelist5.usegenelist5
-   $numsamples.usepair.genelist5.genelist5
-   $numsamples.usepair.title5
-   $numsamples.usepair.fraglen5
-   $numsamples.usepair.linecol5
-
-   $numsamples.usepair.bamfile6
-   $numsamples.usepair.reffile6
-   $numsamples.usepair.genelist6.usegenelist6
-   $numsamples.usepair.genelist6.genelist6
-   $numsamples.usepair.title6
-   $numsamples.usepair.fraglen6
-   $numsamples.usepair.linecol6
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "7":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $numsamples.usepair.bamfile4
-   $numsamples.usepair.reffile4
-   $numsamples.usepair.genelist4.usegenelist4
-   $numsamples.usepair.genelist4.genelist4
-   $numsamples.usepair.title4
-   $numsamples.usepair.fraglen4
-   $numsamples.usepair.linecol4
-
-   $numsamples.usepair.bamfile5
-   $numsamples.usepair.reffile5
-   $numsamples.usepair.genelist5.usegenelist5
-   $numsamples.usepair.genelist5.genelist5
-   $numsamples.usepair.title5
-   $numsamples.usepair.fraglen5
-   $numsamples.usepair.linecol5
-
-   $numsamples.usepair.bamfile6
-   $numsamples.usepair.reffile6
-   $numsamples.usepair.genelist6.usegenelist6
-   $numsamples.usepair.genelist6.genelist6
-   $numsamples.usepair.title6
-   $numsamples.usepair.fraglen6
-   $numsamples.usepair.linecol6
-
-   $numsamples.usepair.bamfile7
-   $numsamples.usepair.reffile7
-   $numsamples.usepair.genelist7.usegenelist7
-   $numsamples.usepair.genelist7.genelist7
-   $numsamples.usepair.title7
-   $numsamples.usepair.fraglen7
-   $numsamples.usepair.linecol7
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "8":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $numsamples.usepair.bamfile4
-   $numsamples.usepair.reffile4
-   $numsamples.usepair.genelist4.usegenelist4
-   $numsamples.usepair.genelist4.genelist4
-   $numsamples.usepair.title4
-   $numsamples.usepair.fraglen4
-   $numsamples.usepair.linecol4
-
-   $numsamples.usepair.bamfile5
-   $numsamples.usepair.reffile5
-   $numsamples.usepair.genelist5.usegenelist5
-   $numsamples.usepair.genelist5.genelist5
-   $numsamples.usepair.title5
-   $numsamples.usepair.fraglen5
-   $numsamples.usepair.linecol5
-
-   $numsamples.usepair.bamfile6
-   $numsamples.usepair.reffile6
-   $numsamples.usepair.genelist6.usegenelist6
-   $numsamples.usepair.genelist6.genelist6
-   $numsamples.usepair.title6
-   $numsamples.usepair.fraglen6
-   $numsamples.usepair.linecol6
-
-   $numsamples.usepair.bamfile7
-   $numsamples.usepair.reffile7
-   $numsamples.usepair.genelist7.usegenelist7
-   $numsamples.usepair.genelist7.genelist7
-   $numsamples.usepair.title7
-   $numsamples.usepair.fraglen7
-   $numsamples.usepair.linecol7
-
-   $numsamples.usepair.bamfile8
-   $numsamples.usepair.reffile8
-   $numsamples.usepair.genelist8.usegenelist8
-   $numsamples.usepair.genelist8.genelist8
-   $numsamples.usepair.title8
-   $numsamples.usepair.fraglen8
-   $numsamples.usepair.linecol8
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "9":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $numsamples.usepair.bamfile4
-   $numsamples.usepair.reffile4
-   $numsamples.usepair.genelist4.usegenelist4
-   $numsamples.usepair.genelist4.genelist4
-   $numsamples.usepair.title4
-   $numsamples.usepair.fraglen4
-   $numsamples.usepair.linecol4
-
-   $numsamples.usepair.bamfile5
-   $numsamples.usepair.reffile5
-   $numsamples.usepair.genelist5.usegenelist5
-   $numsamples.usepair.genelist5.genelist5
-   $numsamples.usepair.title5
-   $numsamples.usepair.fraglen5
-   $numsamples.usepair.linecol5
-
-   $numsamples.usepair.bamfile6
-   $numsamples.usepair.reffile6
-   $numsamples.usepair.genelist6.usegenelist6
-   $numsamples.usepair.genelist6.genelist6
-   $numsamples.usepair.title6
-   $numsamples.usepair.fraglen6
-   $numsamples.usepair.linecol6
-
-   $numsamples.usepair.bamfile7
-   $numsamples.usepair.reffile7
-   $numsamples.usepair.genelist7.usegenelist7
-   $numsamples.usepair.genelist7.genelist7
-   $numsamples.usepair.title7
-   $numsamples.usepair.fraglen7
-   $numsamples.usepair.linecol7
-
-   $numsamples.usepair.bamfile8
-   $numsamples.usepair.reffile8
-   $numsamples.usepair.genelist8.usegenelist8
-   $numsamples.usepair.genelist8.genelist8
-   $numsamples.usepair.title8
-   $numsamples.usepair.fraglen8
-   $numsamples.usepair.linecol8
-
-   $numsamples.usepair.bamfile9
-   $numsamples.usepair.reffile9
-   $numsamples.usepair.genelist9.usegenelist9
-   $numsamples.usepair.genelist9.genelist9
-   $numsamples.usepair.title9
-   $numsamples.usepair.fraglen9
-   $numsamples.usepair.linecol9
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
-#else if $numsamples.numsamples2 == "10":
-   perl "$__tool_directory__"/runNGSplot.pl 
-   $genome_name 
-   $genomic_region_source_type.genomic_region 
-   $genomic_region_source_type.further_information 
-   $genomic_region_source_type.interval_size 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_option 
-   $genomic_region_source_type.flanking_region_option_source_type.flanking_region_size 
-   $numsamples.numsamples2
-   $numsamples.usepair.usepair1
-
-   $numsamples.usepair.bamfile1
-   $numsamples.usepair.reffile1
-   $numsamples.usepair.genelist1.usegenelist1
-   $numsamples.usepair.genelist1.genelist1
-   $numsamples.usepair.title1
-   $numsamples.usepair.fraglen1
-   $numsamples.usepair.linecol1
-
-   $numsamples.usepair.bamfile2
-   $numsamples.usepair.reffile2
-   $numsamples.usepair.genelist2.usegenelist2
-   $numsamples.usepair.genelist2.genelist2
-   $numsamples.usepair.title2
-   $numsamples.usepair.fraglen2
-   $numsamples.usepair.linecol2
-
-   $numsamples.usepair.bamfile3
-   $numsamples.usepair.reffile3
-   $numsamples.usepair.genelist3.usegenelist3
-   $numsamples.usepair.genelist3.genelist3
-   $numsamples.usepair.title3
-   $numsamples.usepair.fraglen3
-   $numsamples.usepair.linecol3
-
-   $numsamples.usepair.bamfile4
-   $numsamples.usepair.reffile4
-   $numsamples.usepair.genelist4.usegenelist4
-   $numsamples.usepair.genelist4.genelist4
-   $numsamples.usepair.title4
-   $numsamples.usepair.fraglen4
-   $numsamples.usepair.linecol4
-
-   $numsamples.usepair.bamfile5
-   $numsamples.usepair.reffile5
-   $numsamples.usepair.genelist5.usegenelist5
-   $numsamples.usepair.genelist5.genelist5
-   $numsamples.usepair.title5
-   $numsamples.usepair.fraglen5
-   $numsamples.usepair.linecol5
-
-   $numsamples.usepair.bamfile6
-   $numsamples.usepair.reffile6
-   $numsamples.usepair.genelist6.usegenelist6
-   $numsamples.usepair.genelist6.genelist6
-   $numsamples.usepair.title6
-   $numsamples.usepair.fraglen6
-   $numsamples.usepair.linecol6
-
-   $numsamples.usepair.bamfile7
-   $numsamples.usepair.reffile7
-   $numsamples.usepair.genelist7.usegenelist7
-   $numsamples.usepair.genelist7.genelist7
-   $numsamples.usepair.title7
-   $numsamples.usepair.fraglen7
-   $numsamples.usepair.linecol7
-
-   $numsamples.usepair.bamfile8
-   $numsamples.usepair.reffile8
-   $numsamples.usepair.genelist8.usegenelist8
-   $numsamples.usepair.genelist8.genelist8
-   $numsamples.usepair.title8
-   $numsamples.usepair.fraglen8
-   $numsamples.usepair.linecol8
-
-   $numsamples.usepair.bamfile9
-   $numsamples.usepair.reffile9
-   $numsamples.usepair.genelist9.usegenelist9
-   $numsamples.usepair.genelist9.genelist9
-   $numsamples.usepair.title9
-   $numsamples.usepair.fraglen9
-   $numsamples.usepair.linecol9
-
-   $numsamples.usepair.bamfile10
-   $numsamples.usepair.reffile10
-   $numsamples.usepair.genelist10.usegenelist10
-   $numsamples.usepair.genelist10.genelist10
-   $numsamples.usepair.title10
-   $numsamples.usepair.fraglen10
-   $numsamples.usepair.linecol10
-
-   $gene_database
-   $randomly_sample
-   $GO.gene_order
-   $GO.KNC
-   $GO.MIT
-   $GO.NRS
-   $chunk_size
-   $quality_requirement
-   $standard_error
-   $radius_size
-   $flooding_fraction
-   $smooth_method
-   $shaded_area
-   $out_zip  $out_avg_png  $out_hm_png
-
+   ## $out_zip
+   $out_avg_png  $out_hm_png &&
+   tar -cf $out_tar data/
 #end if
 
 	]]></command>
@@ -720,7 +55,8 @@ printenv &&
 <-->
 
 <inputs>
-   <param  type="text" value="mm9" name="genome_name" label="Genome" help="(hg19, mm9, rn4, or other genomes supported by your NGS.plot installation)" >
+   <param  type="select" name="genome_name" label="Genome" help="Select Genome (only hg38 supported in this draft)">
+        <option value="hg38">hg38</option>
    </param>
    <conditional name="genomic_region_source_type">
       <param type="select" name="genomic_region" label="Genomic region" help="">
@@ -732,7 +68,7 @@ printenv &&
          <option value="bed">Customized bed file</option>
       </param>
 
-      <when value="tss"> 
+      <when value="tss">
          <param type="select" name="further_information"  label="Further information: Not required for TSS">
             <option value="na">Not Required</option>
          </param>
@@ -748,11 +84,11 @@ printenv &&
                <param name="flanking_region_size" size="30" type="text" value="2000" label="Flanking region size" help="default varies by type: TSS=2000;TES=2000;Genebody=2000;Exon=500;CGI=500;Bed=1000"/>
             </when>
             <!--when value="flanking_floating_size">
-               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>  
+               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>
             </when-->
          </conditional>
-      </when> 
-      <when value="tes"> 
+      </when>
+      <when value="tes">
          <param type="select" name="further_information"  label="Further information: Not required for TES">
             <option value="na">Not Required</option>
          </param>
@@ -768,11 +104,11 @@ printenv &&
                <param name="flanking_region_size" size="30" type="text" value="2000" label="Flanking region size" help="default varies by type: TSS=2000;TES=2000;Genebody=2000;Exon=500;CGI=500;Bed=1000"/>
             </when>
             <!--when value="flanking_floating_size">
-               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>  
+               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>
             </when-->
          </conditional>
-      </when> 
-      <when value="genebody"> 
+      </when>
+      <when value="genebody">
          <param type="select" name="further_information"  label="You selected Genebody, further information can be provided for specific regions to plot">
             <option value="chipseq">ChIP-seq</option>
             <option value="rnaseq">RNA-seq</option>
@@ -793,9 +129,9 @@ printenv &&
             <when value="flanking_floating_size">
                <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>
             </when>
-         </conditional>            
+         </conditional>
       </when>
-      <when value="exon"> 
+      <when value="exon">
          <param type="select" name="further_information"  label="You selected Exon, further information can be provided for specific regions to plot">
             <option value="canonical">Canonical</option>
             <option value="variant">Variant</option>
@@ -823,7 +159,7 @@ printenv &&
             </when>
          </conditional>
       </when>
-      <when value="cgi"> 
+      <when value="cgi">
          <param type="select" name="further_information"  label="You select CGI, further information can be provided for specific regions to plot">
             <option value="ProximalPromoter">ProximalPromoter</option>
             <option value="Genebody">GeneBody</option>
@@ -848,11 +184,11 @@ printenv &&
                <param name="flanking_region_size" size="30" type="text" value="500" label="Flanking region size" help="default varies by type: TSS=2000;TES=2000;Genebody=2000;Exon=500;CGI=500;Bed=1000"/>
             </when>
             <when value="flanking_floating_size">
-               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>  
+               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>
             </when>
          </conditional>
-      </when> 
-      <when value="bed"> 
+      </when>
+      <when value="bed">
          <param type="select" name="further_information"  label="Further information: Not required for bed input">
             <option value="na">Not Required</option>
          </param>
@@ -870,10 +206,10 @@ printenv &&
                <param name="flanking_region_size" size="30" type="text" value="1000" label="Flanking region size" help="default varies by type: TSS=2000;TES=2000;Genebody=2000;Exon=500;CGI=500;Bed=1000"/>
             </when>
             <when value="flanking_floating_size">
-               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>  
+               <param name="flanking_region_size" size="30" type="text" value="0.33" label="Flanking region size as a fraction (or multiple) of interval size"/>
             </when>
          </conditional>
-      </when> 
+      </when>
    </conditional>
 
 
@@ -891,60 +227,60 @@ printenv &&
          <option value="10">10</option> -->
       </param>
 
-      <when value="1">                     
+      <when value="1">
          <conditional name="usepair">
             <param type="select" name="usepair1" label="Use reference alignment?" help="Using a reference bam file will allow the plots to display log2 fold changes instead of read count intensities.">
                <option value="no">No</option>
                <option value="yes">Yes</option>
             </param>
-            <when value="no">                     
+            <when value="no">
                <!-- START: 1 sample, no refpairs, entry 1-->
                <param  type="data"  name="bamfile1" label="Sample 1: Input BAM file"/>
-               <param  type="hidden"  name="reffile1" value="na"/>  
+               <param  type="hidden"  name="reffile1" value="na"/>
                <conditional name="genelist1">
                   <param type="select" name="usegenelist1" label="Sample 1: Gene list">
                      <option value="no">Plot whole genome</option>
                      <option value="yes">Provide restricted gene list</option>
                   </param>
-                  <when value="no">                     
+                  <when value="no">
                      <param type="hidden"  name="genelist1"  value="-1"/>
                   </when>
                   <when value="yes">
                      <param type="data"  name="genelist1"  label="Choose the uploaded gene list for plotting"/>
                   </when>
                </conditional>
-               <param  type="text"  name="title1" value="plot1" label="Sample 1: Image title"/>  
-               <param  type="text"  name="fraglen1" value="150" label="Sample 1: Expected fragment length"/>  
-               <param  type="text"  name="linecol1" value="green" label="Sample 1: Line plot color"/>  
+               <param  type="text"  name="title1" value="plot1" label="Sample 1: Image title"/>
+               <param  type="text"  name="fraglen1" value="150" label="Sample 1: Expected fragment length"/>
+               <param  type="text"  name="linecol1" value="green" label="Sample 1: Line plot color"/>
                <!-- END: 1 sample, no refpairs, entry 1-->
-            </when> 
-            <when value="yes">                     
+            </when>
+            <when value="yes">
                <!-- START: 1 sample, yes refpairs, entry 1-->
                <param  type="data"  name="bamfile1" label="Sample 1: Input BAM file"/>
-               <param  type="data"  name="reffile1" label="Sample 1: Reference BAM file"/>  
+               <param  type="data"  name="reffile1" label="Sample 1: Reference BAM file"/>
                <conditional name="genelist1">
                   <param type="select" name="usegenelist1" label="Sample 1: Gene list">
                      <option value="no">Plot whole genome</option>
                      <option value="yes">Provide restricted gene list</option>
                   </param>
-                  <when value="no">                     
+                  <when value="no">
                      <param type="hidden"  name="genelist1"  value="-1"/>
                   </when>
                   <when value="yes">
                      <param type="data"  name="genelist1"  label="Choose the uploaded gene list for plotting"/>
                   </when>
                </conditional>
-               <param  type="text"  name="title1" value="plot1" label="Sample 1: Image title"/>  
-               <param  type="text"  name="fraglen1" value="150" label="Sample 1: Expected fragment length"/>  
-               <param  type="text"  name="linecol1" value="green" label="Sample 1: Line plot color"/>  
+               <param  type="text"  name="title1" value="plot1" label="Sample 1: Image title"/>
+               <param  type="text"  name="fraglen1" value="150" label="Sample 1: Expected fragment length"/>
+               <param  type="text"  name="linecol1" value="green" label="Sample 1: Line plot color"/>
                <!-- END: 1 sample, yes refpairs, entry 1-->
-            </when> 
+            </when>
          </conditional>
-      </when>                     
+      </when>
    </conditional>
 
 
-   
+
    <param type="select" name="gene_database" label="Supported gene database: RefSeq, Ensembl">
       <option value="ensembl">Ensembl</option>
       <option value="refseq">RefSeq</option>
@@ -1021,6 +357,6 @@ printenv &&
 <outputs>
    <data format="pdf" name="out_avg_png" />
    <data format="pdf" name="out_hm_png" />
-   <data format="zip" name="out_zip"/>
+   <data format="tar" name="out_tar"/>
 </outputs>
 </tool>

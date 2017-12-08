@@ -13,7 +13,7 @@ ngsplot.version <- '2.63_artbio'
 # Program environment variable.
 progpath <- Sys.getenv('NGSPLOT')
 if(progpath == "") {
-    stop("Set environment variable NGSPLOT before run the program. See README 
+    stop("Set environment variable NGSPLOT before run the program. See README
           for details.\n")
 }
 
@@ -48,14 +48,13 @@ args <- commandArgs(T)
 # args <- unlist(strsplit('-G mm10 -R tss -C K27M_no_stim_3_GATCAG_L006_R1_001Aligned.out.srt.rmdup.bam -O test -Debug 1', ' '))
 
 # Input argument parser.
-args.tbl <- parseArgs(args, c('-G', '-C', '-R', '-O')) # see lib/parse.args.r
+args.tbl <- parseArgs(args, c('-G', '-C', '-R')) # see lib/parse.args.r
 if(is.null(args.tbl)){
     cmd.help()
     stop('Error in parsing command line arguments. Stop.\n')
 }
 genome <- args.tbl['-G']
 reg2plot <- args.tbl['-R']
-oname <- args.tbl['-O']
 warning(sprintf("%s", args.tbl))
 
 cat("Configuring variables...")
@@ -74,8 +73,8 @@ attach(plot.args)
 ctg.tbl <- ConfigTbl(args.tbl, fraglen)
 
 # Setup plot-related coordinates and variables.
-plotvar.list <- SetupPlotCoord(args.tbl, ctg.tbl, default.tbl, dbfile.tbl, 
-                               progpath, genome, reg2plot, inttag, flanksize, 
+plotvar.list <- SetupPlotCoord(args.tbl, ctg.tbl, default.tbl, dbfile.tbl,
+                               progpath, genome, reg2plot, inttag, flanksize,
                                samprate, galaxy)
 attach(plotvar.list)
 
@@ -142,7 +141,7 @@ cat('.')
 cat("Done\n")
 
 #######################################################################
-# Here start to extract coverages for all genomic regions and calculate 
+# Here start to extract coverages for all genomic regions and calculate
 # data for plotting.
 
 cat("Analyze bam files and calculate coverage")
@@ -188,11 +187,11 @@ for(r in 1:nrow(ctg.tbl)) {  # r: index of plots/profiles.
     cat("\nreport reg2plot\n")
     cat(reg2plot)
     cat("\n")
-    result.matrix <- covMatrix(debug, chkidx.list, coord.list[[reg]], rnaseq.gb, 
-                               exonmodel, libsize, TRUE, chr.tag, pint, 
-                               reg2plot, flanksize, flankfactor, m.pts, f.pts, 
-                               bufsize, cov.algo, bam.files[1], sn.inbam, 
-                               fraglens[1], map.qual, is.bowtie, 
+    result.matrix <- covMatrix(debug, chkidx.list, coord.list[[reg]], rnaseq.gb,
+                               exonmodel, libsize, TRUE, chr.tag, pint,
+                               reg2plot, flanksize, flankfactor, m.pts, f.pts,
+                               bufsize, cov.algo, bam.files[1], sn.inbam,
+                               fraglens[1], map.qual, is.bowtie,
                                strand.spec=strand.spec)
     # Rprof(NULL)
     if(bam.pair) {  # calculate background.
@@ -206,14 +205,14 @@ for(r in 1:nrow(ctg.tbl)) {  # r: index of plots/profiles.
         # if(class(chr.tag) == 'character') {
         #     stop(sprintf("Read %s error: %s", bam.files[2], chr.tag))
         # }
-        bkg.matrix <- covMatrix(debug, chkidx.list, coord.list[[reg]], rnaseq.gb, 
-                                exonmodel, libsize, TRUE, chr.tag, pint, 
-                                reg2plot, flanksize, flankfactor, m.pts, f.pts, 
-                                bufsize, cov.algo, bam.files[2], sn.inbam, 
-                                fraglen2, map.qual, is.bowtie, 
+        bkg.matrix <- covMatrix(debug, chkidx.list, coord.list[[reg]], rnaseq.gb,
+                                exonmodel, libsize, TRUE, chr.tag, pint,
+                                reg2plot, flanksize, flankfactor, m.pts, f.pts,
+                                bufsize, cov.algo, bam.files[2], sn.inbam,
+                                fraglen2, map.qual, is.bowtie,
                                 strand.spec=strand.spec)
         # browser()
-        result.matrix <- log2((result.matrix + result.pseudo.rpm) / 
+        result.matrix <- log2((result.matrix + result.pseudo.rpm) /
                               (bkg.matrix + bkg.pseudo.rpm))
     }
 
@@ -226,7 +225,7 @@ for(r in 1:nrow(ctg.tbl)) {  # r: index of plots/profiles.
     enrichList[[r]] <- result.matrix
 
     # Return avg. profile.
-    regcovMat[, r] <- apply(result.matrix, 2, function(x) mean(x, trim=robust, 
+    regcovMat[, r] <- apply(result.matrix, 2, function(x) mean(x, trim=robust,
                                                                na.rm=T))
 }
 # browser()
@@ -236,7 +235,7 @@ cat("Done\n")
 # Add row names to heatmap data.
 for(i in 1:length(enrichList)) {
     reg <- ctg.tbl$glist[i]  # gene list name.
-    rownames(enrichList[[i]]) <- paste(coord.list[[reg]]$gname, 
+    rownames(enrichList[[i]]) <- paste(coord.list[[reg]]$gname,
                                        coord.list[[reg]]$tid, sep=':')
 }
 # Some basic parameters.
@@ -250,13 +249,13 @@ if(!fi_tag){
     #### Average profile plot. ####
     out.plot <- avgname
     pdf(out.plot, width=plot.width, height=plot.height, pointsize=font.size)
-    plotmat(regcovMat, ctg.tbl$title, ctg.tbl$color, bam.pair, xticks, pts, 
+    plotmat(regcovMat, ctg.tbl$title, ctg.tbl$color, bam.pair, xticks, pts,
             m.pts, f.pts, pint, shade.alp, confiMat, mw, prof.misc)
     out.dev <- dev.off()
 
     #### Heatmap. ####
     # Setup output device.
-    hd <- SetupHeatmapDevice(reg.list, uniq.reg, ng.list, pts, font.size, 
+    hd <- SetupHeatmapDevice(reg.list, uniq.reg, ng.list, pts, font.size,
                              unit.width, rr)
     reg.hei <- hd$reg.hei  # list of image heights for unique regions.
     hm.width <- hd$hm.width  # image width.
@@ -270,16 +269,16 @@ if(!fi_tag){
     layout(lay.mat, heights=reg.hei)
 
     # Do heatmap plotting.
-    go.list <- plotheat(reg.list, uniq.reg, enrichList, v.low.cutoff, go.algo, 
-                        go.paras, ctg.tbl$title, bam.pair, xticks, flood.frac, 
-                        do.plot=T, hm.color=hm.color, color.distr=color.distr, 
+    go.list <- plotheat(reg.list, uniq.reg, enrichList, v.low.cutoff, go.algo,
+                        go.paras, ctg.tbl$title, bam.pair, xticks, flood.frac,
+                        do.plot=T, hm.color=hm.color, color.distr=color.distr,
                         color.scale=color.scale)
     out.dev <- dev.off()
     cat("Done\n")
 } else {
-    go.list <- plotheat(reg.list, uniq.reg, enrichList, v.low.cutoff, go.algo, 
-                        go.paras, ctg.tbl$title, bam.pair, xticks, flood.frac, 
-                        do.plot=F, hm.color=hm.color, color.distr=color.distr, 
+    go.list <- plotheat(reg.list, uniq.reg, enrichList, v.low.cutoff, go.algo,
+                        go.paras, ctg.tbl$title, bam.pair, xticks, flood.frac,
+                        do.plot=F, hm.color=hm.color, color.distr=color.distr,
                         color.scale=color.scale)
 }
 
@@ -302,40 +301,48 @@ if(!is.null(confiMat)){
 for(i in 1:length(enrichList)) {
     reg <- ctg.tbl$glist[i]  # gene list name.
        out.heat <- file.path(oname1, paste('hm', i, '.txt', sep=''))
-    write.table(cbind(coord.list[[reg]][, c('gid', 'gname', 'tid', 'strand')], 
-                      enrichList[[i]]), 
+    write.table(cbind(coord.list[[reg]][, c('gid', 'gname', 'tid', 'strand')],
+                      enrichList[[i]]),
                 file=out.heat, row.names=F, sep="\t", quote=F)
 }
 
 # Avg. profile R data.
 prof.dat <- file.path(oname1, 'avgprof.RData')
-save(plot.width, plot.height, regcovMat, ctg.tbl, bam.pair, xticks, pts, 
-     m.pts, f.pts, pint, shade.alp, confiMat, mw, prof.misc, se, v.lib.size, 
+save(plot.width, plot.height, regcovMat, ctg.tbl, bam.pair, xticks, pts,
+     m.pts, f.pts, pint, shade.alp, confiMat, mw, prof.misc, se, v.lib.size,
      font.size,
      file=prof.dat)
 
 # Heatmap R data.
 heat.dat <- file.path(oname1, 'heatmap.RData')
-save(reg.list, uniq.reg, ng.list, pts, enrichList, v.low.cutoff, go.algo, 
-     ctg.tbl, bam.pair, xticks, flood.frac, hm.color, unit.width, rr, 
+save(reg.list, uniq.reg, ng.list, pts, enrichList, v.low.cutoff, go.algo,
+     ctg.tbl, bam.pair, xticks, flood.frac, hm.color, unit.width, rr,
      go.list, color.scale, v.lib.size, font.size, go.paras, low.count,
-     color.distr, 
+     color.distr,
      file=heat.dat)
 cat("Done\n")
 
 # Wrap results up.
 cat("Wrapping results up...")
 cur.dir <- getwd()
+cat("cur.dir")
+cat(cur.dir)
 out.dir <- dirname(oname1)
+cat("out.dir")
+cat(out.dir)
 out.zip <- basename(oname1)
-setwd(out.dir)
-if(!zip(paste(out.zip, '.zip', sep=''), out.zip, extras='-q')) {
-    if(unlink(oname, recursive=T)) {
-        warning(sprintf("Unable to delete intermediate result folder: %s", 
-                        oname))
-    }
-}
-setwd(cur.dir)
+cat("out.zip")
+cat(out.zip)
+#setwd(out.dir)
+#cat("Reaching this point without failure")
+#zip(paste(out.zip, '.zip', sep=''), out.zip, extras='-q')
+zip("data.zip", "data", extras='-q')
+#if(!zip(paste(out.zip, '.zip', sep=''), out.zip, extras='-q')) {
+#    if(unlink(oname, recursive=T)) {
+#        warning(sprintf("Unable to delete intermediate result folder: %s",
+#                        oname))
+#    }
+#}
+#setwd(cur.dir)
 cat("Done\n")
 cat("All done. Cheers!\n")
-

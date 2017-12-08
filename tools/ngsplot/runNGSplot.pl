@@ -32,7 +32,7 @@ for (my $i=1;$i<=$numsamples;$i++) {
    my $genelist=shift(@inputs);
    my $title=shift(@inputs);
    my $fraglen=shift(@inputs);
-   my $color=shift(@inputs);   
+   my $color=shift(@inputs);
    if ($usepairs eq 'yes') {
       syswrite(FILE, "$bamfile\:$reffile\t$genelist\t$title\t$fraglen\t$color\n");
    }else {
@@ -54,7 +54,7 @@ my $radius_size = shift(@inputs);
 my $flooding_fraction = shift(@inputs);
 my $smooth_method = shift(@inputs);
 my $shaded_area = shift(@inputs);
-my $out_name = shift(@inputs);
+# my $out_name = shift(@inputs);
 my $out_avg_name = shift(@inputs);
 my $out_hm_name = shift(@inputs);
 
@@ -62,7 +62,7 @@ my $out_hm_name = shift(@inputs);
 my $G = $genome_name;
 my $R = $genomic_region_source_type__genomic_region;
 my $C = $outfile;
-my $O = $out_name;
+# my $O = $out_name;
 my $O2 = $out_avg_name;
 my $O3 = $out_hm_name;
 my $F = $genomic_region_source_type__further_information;
@@ -94,33 +94,31 @@ system($cmd5);
 my $NGSPLOT = $ENV{"NGSPLOT"};
 my $cmd='';
 if (($R eq 'tss')||($R eq 'tes')) {
-   $cmd = "Rscript $NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O $O -O2 $O2 -O3 $O3 -D $D -L $L -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H >> $logfile 2>&1";
+   $cmd = "Rscript $NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O2 $O2 -O3 $O3 -D $D -L $L -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H >> $logfile 2>&1";
 }elsif ($genomic_region_source_type__flanking_region_option_source_type__flanking_region_option eq 'flanking_region_size') {
    if ($IN eq 'automatic') {
-      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O $O -O2 $O2 -O3 $O3 -D $D -L $L -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H >> $logfile 2>&1";
+      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O2 $O2 -O3 $O3 -D $D -L $L -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H >> $logfile 2>&1";
    }else {
-      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O $O -O2 $O2 -O3 $O3 -D $D -L $L -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H -IN $IN  >> $logfile 2>&1";
+      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O2 $O2 -O3 $O3 -D $D -L $L -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H -IN $IN  >> $logfile 2>&1";
    }
 }elsif ($genomic_region_source_type__flanking_region_option_source_type__flanking_region_option eq 'flanking_floating_size') {
    if ($IN eq 'automatic') {
-      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O $O -O2 $O2 -O3 $O3 -D $D -N $N -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H  >> $logfile 2>&1";
+      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O2 $O2 -O3 $O3 -D $D -N $N -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H  >> $logfile 2>&1";
    }else {
-      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O $O -O2 $O2 -O3 $O3 -D $D -N $N -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H -IN $IN  >> $logfile 2>&1";
+      $cmd = "$NGSPLOT/ngs.plot.r -Galaxy 1 -P 0 -G $G -R $R -C $C -O2 $O2 -O3 $O3 -D $D -N $N -S $S -GO $GO -CS $CS -MQ $MQ -SE $SE -RB $RB -FC $FC -MW $MW -H $H -IN $IN  >> $logfile 2>&1";
    }
 }
 
 print("$cmd\n");
-my $cmd2="cp data.zip $O";
-my $cmd3="rm $outfile";
+#my $cmd2="cp data.zip $O";
+#my $cmd3="rm $outfile";
 syswrite(FILE2, "\n$cmd\n");
-syswrite(FILE2, "\n$cmd2\n");
-syswrite(FILE2, "\n$cmd3\n");
+#syswrite(FILE2, "\n$cmd2\n");
+#syswrite(FILE2, "\n$cmd3\n");
 
 # print STDERR "cmd: $cmd\n";
 system($cmd);
-system($cmd2);
-system($cmd3);
+#system($cmd2);
+#system($cmd3);
 
 close(FILE2);
-
-
