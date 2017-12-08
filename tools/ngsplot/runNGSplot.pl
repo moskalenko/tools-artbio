@@ -22,7 +22,7 @@ my $randfile = rand(100)."\.config\.txt";
 my $randfile2 = $randfile;
 $randfile2 =~ s/config\.txt/logfile/gm;
 
-my $outfile = File::Spec->catfile(abs_path(dirname(__FILE__)),"$randfile");
+my $outfile = File::Spec->catfile($ENV{"PWD"},"ngsplot.config.txt");
 open(FILE,">$outfile");
 
 for (my $i=1;$i<=$numsamples;$i++) {
@@ -87,7 +87,7 @@ if ($GO eq 'km') {
    $GO = "$GO -KNC $KNC -MIT $MIT -NRS $NRS";
 }
 
-my $logfile = File::Spec->catfile(abs_path(dirname(__FILE__)),"$randfile2");
+my $logfile = File::Spec->catfile($ENV{"PWD"},"ngsplot.log");
 open(FILE2,">>$logfile");
 my $cmd5="pwd >> $logfile 2>&1";
 system($cmd5);
@@ -112,17 +112,14 @@ if (($R eq 'tss')||($R eq 'tes')) {
 print("$cmd\n");
 my $cmd2="cp data.zip $O";
 my $cmd3="rm $outfile";
-my $cmd4="rm $logfile";
 syswrite(FILE2, "\n$cmd\n");
 syswrite(FILE2, "\n$cmd2\n");
 syswrite(FILE2, "\n$cmd3\n");
-syswrite(FILE2, "\n$cmd4\n\n");
 
 # print STDERR "cmd: $cmd\n";
 system($cmd);
 system($cmd2);
-#system($cmd3);
-#system($cmd4);
+system($cmd3);
 
 close(FILE2);
 
