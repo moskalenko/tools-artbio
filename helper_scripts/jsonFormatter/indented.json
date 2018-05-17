@@ -1,0 +1,1178 @@
+{
+    "name": "mir_analysis_artbio_013",
+    "annotation": "",
+    "uuid": "7c63fde2-206c-48b4-a6fd-07158b0e4fdb",
+    "format-version": "0.1",
+    "tags": [],
+    "steps": {
+        "12": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c11\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 12,
+            "uuid": "e1bf74ae-a0b7-4e8c-a779-9ab0f9bbc97f",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 1432,
+                "left": 971
+            }
+        },
+        "11": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c10\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 11,
+            "uuid": "e6335e64-6a4b-4bf2-bd37-392926de3cda",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 1311,
+                "left": 971
+            }
+        },
+        "13": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c12\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 13,
+            "uuid": "7112f186-c798-4aec-ae8a-7aa2776a1642",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 1551,
+                "left": 971
+            }
+        },
+        "7": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"columnList\": \"\\\"c1,c6\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"delimiter\": \"\\\"T\\\"\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+            "label": null,
+            "id": 7,
+            "uuid": "c5e5ebf3-ea7b-463a-8f64-b515cd985a9d",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 831,
+                "left": 971
+            }
+        },
+        "2": {
+            "name": "Column Join",
+            "tool_shed_repository": {
+                "changeset_revision": "dfde09461b1e",
+                "name": "collection_column_join",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "iuc"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input_tabular",
+                    "description": "runtime parameter for tool Column Join"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionscript_output": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "script_output"
+                },
+                "HideDatasetActiontabular_output": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "tabular_output"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/collection_column_join/collection_column_join/0.0.2",
+            "tool_state": "{\"__page__\": null, \"identifier_column\": \"\\\"1\\\"\", \"include_outputs\": \"null\", \"__rerun_remap_job_id__\": null, \"input_tabular\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"fill_char\": \"\\\".\\\"\", \"has_header\": \"\\\"0\\\"\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 2,
+            "uuid": "3fd6482b-bae6-4859-bad0-1cffa2a5dbc7",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "tabular_output",
+                    "type": "tabular"
+                },
+                {
+                    "name": "script_output",
+                    "type": "txt"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input_tabular": {
+                    "id": 1,
+                    "output_name": "mir_count_file"
+                }
+            },
+            "tool_version": "0.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/collection_column_join/collection_column_join/0.0.2",
+            "position": {
+                "top": 436,
+                "left": 567
+            }
+        },
+        "18": {
+            "name": "DESeq2",
+            "tool_shed_repository": {
+                "changeset_revision": "57e2f9454d9e",
+                "name": "deseq2",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "iuc"
+            },
+            "workflow_outputs": [
+                {
+                    "uuid": "63519051-ea0c-4c1f-beb1-aacd6a035743",
+                    "label": null,
+                    "output_name": "plots"
+                },
+                {
+                    "uuid": "4961fd4c-9d03-4fa5-98c1-62bfd293787f",
+                    "label": "",
+                    "output_name": "deseq_out"
+                }
+            ],
+            "inputs": [],
+            "type": "tool",
+            "post_job_actions": {
+                "RenameDatasetActionplots": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "plots deseq E14.5"
+                    },
+                    "output_name": "plots"
+                },
+                "HideDatasetActionsplit_output": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "split_output"
+                },
+                "RenameDatasetActioncounts_out": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "counts deseq E14.5"
+                    },
+                    "output_name": "counts_out"
+                },
+                "RenameDatasetActiondeseq_out": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "deseq E14.5"
+                    },
+                    "output_name": "deseq_out"
+                },
+                "RenameDatasetActionsplit_output": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "split deseq E14.5"
+                    },
+                    "output_name": "split_output"
+                },
+                "HideDatasetActioncounts_out": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "counts_out"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39",
+            "tool_state": "{\"fit_type\": \"\\\"1\\\"\", \"__page__\": null, \"tximport\": \"{\\\"tximport_selector\\\": \\\"count\\\", \\\"__current_case__\\\": 1}\", \"outlier_replace_off\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"auto_mean_filter_off\": \"\\\"false\\\"\", \"rep_factorName\": \"[{\\\"__index__\\\": 0, \\\"factorName\\\": \\\"Genotype\\\", \\\"rep_factorLevel\\\": [{\\\"__index__\\\": 0, \\\"factorLevel\\\": \\\"HET\\\", \\\"countsFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 1, \\\"factorLevel\\\": \\\"WT\\\", \\\"countsFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]}]\", \"normCounts\": \"\\\"false\\\"\", \"outlier_filter_off\": \"\\\"false\\\"\", \"many_contrasts\": \"\\\"false\\\"\", \"pdf\": \"\\\"true\\\"\"}",
+            "label": "DESeq E14.5",
+            "id": 18,
+            "uuid": "6e0b1835-70f8-447c-8fd9-3f6bde414872",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "split_output",
+                    "type": "input"
+                },
+                {
+                    "name": "deseq_out",
+                    "type": "tabular"
+                },
+                {
+                    "name": "plots",
+                    "type": "pdf"
+                },
+                {
+                    "name": "counts_out",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "rep_factorName_0|rep_factorLevel_1|countsFile": [
+                    {
+                        "id": 14,
+                        "output_name": "out_file1"
+                    },
+                    {
+                        "id": 15,
+                        "output_name": "out_file1"
+                    }
+                ],
+                "rep_factorName_0|rep_factorLevel_0|countsFile": [
+                    {
+                        "id": 12,
+                        "output_name": "out_file1"
+                    },
+                    {
+                        "id": 13,
+                        "output_name": "out_file1"
+                    }
+                ]
+            },
+            "tool_version": "2.11.39",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39",
+            "position": {
+                "top": 1432,
+                "left": 1594
+            }
+        },
+        "3": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c2\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 3,
+            "uuid": "121dab55-85ee-4e02-828b-fa53ace9ea78",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 351,
+                "left": 971
+            }
+        },
+        "4": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c3\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 4,
+            "uuid": "4b8eca71-c19b-4910-ade8-039bbb732df5",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 471,
+                "left": 971
+            }
+        },
+        "5": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c4\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 5,
+            "uuid": "8e8f0c93-ad95-4146-9e27-c359ea808c55",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 591,
+                "left": 971
+            }
+        },
+        "6": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c5\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 6,
+            "uuid": "ad2608a5-1b2d-42ee-8517-b52e517f6897",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 711,
+                "left": 971
+            }
+        },
+        "17": {
+            "name": "DESeq2",
+            "tool_shed_repository": {
+                "changeset_revision": "57e2f9454d9e",
+                "name": "deseq2",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "iuc"
+            },
+            "workflow_outputs": [
+                {
+                    "uuid": "34ac8f1e-6ebf-4c1a-a0f5-625aafec7276",
+                    "label": null,
+                    "output_name": "deseq_out"
+                }
+            ],
+            "inputs": [],
+            "type": "tool",
+            "post_job_actions": {
+                "RenameDatasetActioncounts_out": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "counts E15.5"
+                    },
+                    "output_name": "counts_out"
+                },
+                "HideDatasetActionplots": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "plots"
+                },
+                "RenameDatasetActionplots": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "plots E15.5"
+                    },
+                    "output_name": "plots"
+                },
+                "HideDatasetActionsplit_output": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "split_output"
+                },
+                "RenameDatasetActiondeseq_out": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "deseq E15.5"
+                    },
+                    "output_name": "deseq_out"
+                },
+                "RenameDatasetActionsplit_output": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "split E15.5"
+                    },
+                    "output_name": "split_output"
+                },
+                "HideDatasetActioncounts_out": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "counts_out"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39",
+            "tool_state": "{\"fit_type\": \"\\\"1\\\"\", \"__page__\": null, \"tximport\": \"{\\\"tximport_selector\\\": \\\"count\\\", \\\"__current_case__\\\": 1}\", \"outlier_replace_off\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"auto_mean_filter_off\": \"\\\"false\\\"\", \"rep_factorName\": \"[{\\\"__index__\\\": 0, \\\"factorName\\\": \\\"Genotype\\\", \\\"rep_factorLevel\\\": [{\\\"__index__\\\": 0, \\\"factorLevel\\\": \\\"HET\\\", \\\"countsFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 1, \\\"factorLevel\\\": \\\"WT\\\", \\\"countsFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]}]\", \"normCounts\": \"\\\"false\\\"\", \"outlier_filter_off\": \"\\\"false\\\"\", \"many_contrasts\": \"\\\"false\\\"\", \"pdf\": \"\\\"true\\\"\"}",
+            "label": "DESeq E15.5",
+            "id": 17,
+            "uuid": "6d17cdc7-750b-4dbf-af00-a522b2f7857e",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "split_output",
+                    "type": "input"
+                },
+                {
+                    "name": "deseq_out",
+                    "type": "tabular"
+                },
+                {
+                    "name": "plots",
+                    "type": "pdf"
+                },
+                {
+                    "name": "counts_out",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "rep_factorName_0|rep_factorLevel_1|countsFile": [
+                    {
+                        "id": 10,
+                        "output_name": "out_file1"
+                    },
+                    {
+                        "id": 11,
+                        "output_name": "out_file1"
+                    }
+                ],
+                "rep_factorName_0|rep_factorLevel_0|countsFile": [
+                    {
+                        "id": 7,
+                        "output_name": "out_file1"
+                    },
+                    {
+                        "id": 8,
+                        "output_name": "out_file1"
+                    },
+                    {
+                        "id": 9,
+                        "output_name": "out_file1"
+                    }
+                ]
+            },
+            "tool_version": "2.11.39",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39",
+            "position": {
+                "top": 1144,
+                "left": 1595.5
+            }
+        },
+        "8": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c7\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 8,
+            "uuid": "7b3f4ca4-6f0e-43d6-ab5f-47942414f6a5",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 951,
+                "left": 971
+            }
+        },
+        "14": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c13\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 14,
+            "uuid": "3c3fda0b-83ea-4708-a494-491b25a7aa36",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 1671,
+                "left": 971
+            }
+        },
+        "15": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c14\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 15,
+            "uuid": "5e14bf77-e96d-45e5-961b-339c59b4e1c2",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 1791,
+                "left": 971
+            }
+        },
+        "1": {
+            "name": "miRcounts",
+            "tool_shed_repository": {
+                "changeset_revision": "6d3e98cba73a",
+                "name": "mircounts",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "artbio"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "cutadapt",
+                    "description": "runtime parameter for tool miRcounts"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActiongff3": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "gff3"
+                },
+                "HideDatasetActionlatticePDF": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "latticePDF"
+                },
+                "HideDatasetActionmir_count_file": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "mir_count_file"
+                },
+                "HideDatasetActionpre_mir_count_file": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "pre_mir_count_file"
+                },
+                "HideDatasetActioncoverage_dataframe": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "coverage_dataframe"
+                },
+                "HideDatasetActionoutput": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "output"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/artbio/mircounts/mircounts/1.3.2",
+            "tool_state": "{\"mirbase_version\": \"\\\"22\\\"\", \"output_premir_counts\": \"\\\"true\\\"\", \"__page__\": null, \"genomeKey\": \"\\\"mmu\\\"\", \"__rerun_remap_job_id__\": null, \"plotting\": \"{\\\"plottingOption\\\": \\\"yes\\\", \\\"display\\\": \\\"relative\\\", \\\"__current_case__\\\": 0}\", \"output_mir_counts\": \"\\\"true\\\"\", \"v\": \"\\\"1\\\"\", \"cutadapt\": \"{\\\"min\\\": \\\"18\\\", \\\"max\\\": \\\"36\\\", \\\"cutoption\\\": \\\"yes\\\", \\\"clip_source\\\": {\\\"clip_source_list\\\": \\\"prebuilt\\\", \\\"clip_sequence\\\": \\\"TGGAATTCTCGGGTGCCAAG\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"input\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"Nmode\\\": \\\"reject\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\", \"input|__identifier__\": \"\\\"GZS26.fastq\\\"\"}",
+            "label": null,
+            "id": 1,
+            "uuid": "15ea6db3-cfb6-4955-b75a-0fb6cddb8ca5",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "bam"
+                },
+                {
+                    "name": "gff3",
+                    "type": "gff3"
+                },
+                {
+                    "name": "pre_mir_count_file",
+                    "type": "tabular"
+                },
+                {
+                    "name": "mir_count_file",
+                    "type": "tabular"
+                },
+                {
+                    "name": "coverage_dataframe",
+                    "type": "tabular"
+                },
+                {
+                    "name": "latticePDF",
+                    "type": "pdf"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "cutadapt|input": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "tool_version": "1.3.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/artbio/mircounts/mircounts/1.3.2",
+            "position": {
+                "top": 356,
+                "left": 319
+            }
+        },
+        "0": {
+            "name": "Input dataset collection",
+            "annotation": "",
+            "workflow_outputs": [
+                {
+                    "uuid": "80032abb-5aa8-4181-8d65-8e983f465640",
+                    "label": null,
+                    "output_name": "output"
+                }
+            ],
+            "inputs": [],
+            "type": "data_collection_input",
+            "content_id": null,
+            "tool_state": "{\"collection_type\": \"list\"}",
+            "label": "mir sequences collection",
+            "id": 0,
+            "uuid": "42856182-cb6d-4b08-8640-ee2251ca337c",
+            "outputs": [],
+            "errors": null,
+            "input_connections": {},
+            "tool_version": null,
+            "tool_id": null,
+            "position": {
+                "top": 201,
+                "left": 137
+            }
+        },
+        "9": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c8\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 9,
+            "uuid": "c79a8bf6-60ea-40c6-8dc7-4b25e6d8fd4f",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 1071,
+                "left": 971
+            }
+        },
+        "16": {
+            "name": "DESeq2",
+            "tool_shed_repository": {
+                "changeset_revision": "57e2f9454d9e",
+                "name": "deseq2",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "iuc"
+            },
+            "workflow_outputs": [
+                {
+                    "uuid": "38131309-bb71-42bf-ba9a-aeb8aea50681",
+                    "label": null,
+                    "output_name": "plots"
+                },
+                {
+                    "uuid": "0a03f39f-90a4-4e93-a386-92d8736672ef",
+                    "label": null,
+                    "output_name": "deseq_out"
+                }
+            ],
+            "inputs": [],
+            "type": "tool",
+            "post_job_actions": {
+                "RenameDatasetActionplots": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "plots 17.5"
+                    },
+                    "output_name": "plots"
+                },
+                "HideDatasetActionsplit_output": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "split_output"
+                },
+                "RenameDatasetActioncounts_out": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "counts 17.5"
+                    },
+                    "output_name": "counts_out"
+                },
+                "RenameDatasetActiondeseq_out": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "deseq"
+                    },
+                    "output_name": "deseq_out"
+                },
+                "RenameDatasetActionsplit_output": {
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "split 17.5"
+                    },
+                    "output_name": "split_output"
+                },
+                "HideDatasetActioncounts_out": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "counts_out"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39",
+            "tool_state": "{\"fit_type\": \"\\\"1\\\"\", \"__page__\": null, \"tximport\": \"{\\\"tximport_selector\\\": \\\"count\\\", \\\"__current_case__\\\": 1}\", \"outlier_replace_off\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"auto_mean_filter_off\": \"\\\"false\\\"\", \"rep_factorName\": \"[{\\\"__index__\\\": 0, \\\"factorName\\\": \\\"Genotype\\\", \\\"rep_factorLevel\\\": [{\\\"__index__\\\": 0, \\\"factorLevel\\\": \\\"HET\\\", \\\"countsFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 1, \\\"factorLevel\\\": \\\"WT\\\", \\\"countsFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]}]\", \"normCounts\": \"\\\"false\\\"\", \"outlier_filter_off\": \"\\\"false\\\"\", \"many_contrasts\": \"\\\"false\\\"\", \"pdf\": \"\\\"true\\\"\"}",
+            "label": "DESeq 17.5",
+            "id": 16,
+            "uuid": "b38ec3ee-1cfc-4a9c-9480-092f6de17d64",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "split_output",
+                    "type": "input"
+                },
+                {
+                    "name": "deseq_out",
+                    "type": "tabular"
+                },
+                {
+                    "name": "plots",
+                    "type": "pdf"
+                },
+                {
+                    "name": "counts_out",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "rep_factorName_0|rep_factorLevel_1|countsFile": [
+                    {
+                        "id": 6,
+                        "output_name": "out_file1"
+                    },
+                    {
+                        "id": 5,
+                        "output_name": "out_file1"
+                    }
+                ],
+                "rep_factorName_0|rep_factorLevel_0|countsFile": [
+                    {
+                        "id": 3,
+                        "output_name": "out_file1"
+                    },
+                    {
+                        "id": 4,
+                        "output_name": "out_file1"
+                    }
+                ]
+            },
+            "tool_version": "2.11.39",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39",
+            "position": {
+                "top": 560,
+                "left": 1578.5
+            }
+        },
+        "10": {
+            "name": "Cut",
+            "tool_shed_repository": {
+                "changeset_revision": "cec635fab700",
+                "name": "cut_columns",
+                "tool_shed": "toolshed.g2.bx.psu.edu",
+                "owner": "devteam"
+            },
+            "workflow_outputs": [],
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "runtime parameter for tool Cut"
+                }
+            ],
+            "type": "tool",
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {},
+                    "output_name": "out_file1"
+                }
+            },
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c1,c9\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/home/galaxy/galaxy-dist/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "label": null,
+            "id": 10,
+            "uuid": "1530ec78-40bb-4463-b4cd-bbc256a4c50d",
+            "annotation": "",
+            "outputs": [
+                {
+                    "name": "out_file1",
+                    "type": "tabular"
+                }
+            ],
+            "errors": null,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "tabular_output"
+                }
+            },
+            "tool_version": "1.0.2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cut_columns/Cut1/1.0.2",
+            "position": {
+                "top": 1191,
+                "left": 971
+            }
+        }
+    },
+    "a_galaxy_workflow": "true"
+}
